@@ -1,9 +1,9 @@
-import reactLogo from './assets/react.svg'
-import djangoLogo from '/django.svg'
-import flaskLogo from '/flask.svg'
-import dockerLogo from '/docker.svg'
-import awsLogo from '/aws.svg'
-import './Home.css'
+import reactLogo from '../assets/logo/react.svg'
+import djangoLogo from '../assets/logo/django.svg'
+import flaskLogo from '../assets/logo/flask.svg'
+import dockerLogo from '../assets/logo/docker.svg'
+import awsLogo from '../assets/logo/aws.svg'
+import '../assets/css/Home.css'
 
 
 function Home() {
