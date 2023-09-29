@@ -10,6 +10,7 @@ function Home() {
 
   return (
     <div className="mainRoot">
+      
       <h2>Secure Forcast</h2>
       <h5 className="motoLine">Expand Your Business Through Data Analysis</h5>
 
@@ -19,7 +20,10 @@ function Home() {
         </button>
       </div>
 
-      <a href="https://sites.google.com/view/husnulabid26/">Hosted By: Husnul Abid</a>
+      <p>
+        Hosted By&nbsp;:&nbsp;
+        <a href="https://sites.google.com/view/husnulabid26/">Husnul Abid</a>
+      </p>
 
       <div className="poweredByLogo">
         <a href="https://www.djangoproject.com/" target="_blank">
@@ -42,6 +46,7 @@ function Home() {
           <img src={awsLogo} className="logo aws" alt="Aws logo" />
         </a>
       </div>
+
     </div>
   )
 }
