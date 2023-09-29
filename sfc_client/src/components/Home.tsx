@@ -1,23 +1,22 @@
-import reactLogo from '../assets/logo/react.svg'
-import djangoLogo from '../assets/logo/django.svg'
-import flaskLogo from '../assets/logo/flask.svg'
-import dockerLogo from '../assets/logo/docker.svg'
-import awsLogo from '../assets/logo/aws.svg'
-import '../assets/css/Home.css'
+import { Link } from "react-router-dom";
 
+import reactLogo from "../assets/logo/react.svg";
+import djangoLogo from "../assets/logo/django.svg";
+import flaskLogo from "../assets/logo/flask.svg";
+import dockerLogo from "../assets/logo/docker.svg";
+import awsLogo from "../assets/logo/aws.svg";
+import "../assets/css/Home.css";
 
 function Home() {
-
   return (
     <div className="mainRoot">
-      
       <h2>Secure Forcast</h2>
       <h5 className="motoLine">Expand Your Business Through Data Analysis</h5>
 
       <div className="exploreButton">
-        <button className="btn btn-primary">
-          Let's Explore
-        </button>
+        <Link to="/dashboard">
+          <button className="btn btn-primary">Let's Explore</button>
+        </Link>
       </div>
 
       <p>
@@ -46,9 +45,8 @@ function Home() {
           <img src={awsLogo} className="logo aws" alt="Aws logo" />
         </a>
       </div>
-
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

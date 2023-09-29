@@ -3,10 +3,9 @@ function Dashboard() {
 
   return (
     <div>
-      <h2>Dashboard</h2>
-
+      <h5>Dashboard</h5>
     </div>
   )
 }
 
-export default Dashboard
+export default Dashboard;
