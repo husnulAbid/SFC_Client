@@ -24,7 +24,6 @@ const Sidebar: any = () => {
       </Link>
 
       <ul className="sidebar-main-menu">
-
         <Link to="/dashboard" style={{ textDecoration: "none" }}>
           <li>Dashboard</li>
         </Link>
@@ -40,12 +39,15 @@ const Sidebar: any = () => {
 
         {isItemOpen_1 && (
           <ul className="sub-menu">
-            <Link to="/meat_consumption" style={{ textDecoration: "none" }}>
+            <Link to="/data_analysis/meat_consumption" style={{ textDecoration: "none" }}>
               <li>Meat Consumption</li>
             </Link>
 
+            <Link to="/data_analysis/tweet_trend" style={{ textDecoration: "none" }}>
+              <li>Tweet Trend</li>
+            </Link>
+
             <li>War Effect</li>
-            <li>Tweet Trend</li>
           </ul>
         )}
 
