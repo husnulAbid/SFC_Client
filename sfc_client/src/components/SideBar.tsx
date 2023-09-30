@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "../assets/css/SideBar.css";
 
@@ -16,40 +17,45 @@ const Sidebar: any = () => {
 
   return (
     <div className="sidebar open">
-      <div className="sidebar-header">
-        <h2>Dashboard</h2>
-      </div>
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <div className="sidebar-header">
+          <h2>SFC Tool</h2>
+        </div>
+      </Link>
 
       <ul className="sidebar-main-menu">
-        
-      <li onClick={toggleItem_1}>
-            Data Analysis
-            {!isItemOpen_1 && (
-                <span className="arrow-closed">&#9654;</span>
-            )}
-            {isItemOpen_1 && (
-                <span className="arrow-open">&#9654;</span>
-            )}
-            
+
+        <Link to="/dashboard" style={{ textDecoration: "none" }}>
+          <li>Dashboard</li>
+        </Link>
+
+        <li onClick={toggleItem_1}>
+          Data Analysis
+          <span
+            className={`arrow ${isItemOpen_1 ? "arrow-closed" : "arrow-open"}`}
+          >
+            &#9654;
+          </span>
         </li>
 
         {isItemOpen_1 && (
           <ul className="sub-menu">
-            <li>Meat Consumption</li>
+            <Link to="/meat_consumption" style={{ textDecoration: "none" }}>
+              <li>Meat Consumption</li>
+            </Link>
+
             <li>War Effect</li>
             <li>Tweet Trend</li>
           </ul>
         )}
 
         <li onClick={toggleItem_2}>
-            Future Prediction
-            {!isItemOpen_2 && (
-                <span className="arrow-closed">&#9654;</span>
-            )}
-            {isItemOpen_2 && (
-                <span className="arrow-open">&#9654;</span>
-            )}
-            
+          Future Prediction
+          <span
+            className={`arrow ${isItemOpen_2 ? "arrow-closed" : "arrow-open"}`}
+          >
+            &#9654;
+          </span>
         </li>
 
         {isItemOpen_2 && (

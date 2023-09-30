@@ -50,10 +50,15 @@
     font-size: medium;
   }
 
+  .divider {
+    border-color: #ccc;
+  }
+
   .arrow-closed {
     display: inline-block;
     margin-left: 10px;
     font-size: 1rem;
+    transition: transform 0.2s ease-in-out;
   }
 
   .arrow-open {
@@ -64,5 +69,9 @@
   }
   
   .open .arrow-open {
-    transform: rotate(90deg); /* Rotate the arrow when the menu is open */
+    transform: rotate(90deg); 
+  }
+
+  .open .arrow-closed {
+    transform: rotate(-90deg); 
   }

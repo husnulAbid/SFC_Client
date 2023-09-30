@@ -3,94 +3,92 @@
 }
 
 .mainRoot {
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 
-    width: 100wh;
-    height: 100vh; 
-    overflow: hidden;
+  width: 100wh;
+  height: 100vh;
+  overflow: hidden;
 
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-  
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-  
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 200%;
-  }
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 
-  ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* make scrollbar transparent */
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 200%;
 }
 
-  .motoLine {
-    padding: 1em;
-  }
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
 
-  .exploreButton {
-    padding: 4em;
-  }
+.motoLine {
+  padding: 1em;
+}
 
-  .exploreButton:hover {
-    filter: drop-shadow(0 0 2em #205ed1aa);
-  }
+.exploreButton {
+  padding: 4em;
+}
 
-  .hostedBy {
-    padding: 2em;
-  }
+.exploreButton:hover {
+  filter: drop-shadow(0 0 2em #205ed1aa);
+}
 
-  .poweredByLogo {
-    padding: 0.1em;
-  }
-  
-  .logo {
-    height: 6em;
-    padding: 1em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
+.hostedBy {
+  padding: 2em;
+}
 
-  .logo.django:hover {
-    filter: drop-shadow(0 0 2em #1b9154aa);
-  }
+.poweredByLogo {
+  padding: 0.1em;
+}
 
-  .logo.flask:hover {
-    filter: drop-shadow(0 0 3em #737a76aa);
-  }
+.logo {
+  height: 6em;
+  padding: 1em;
+  will-change: filter;
+  transition: filter 300ms;
+}
 
-  .logo.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
-  }
+.logo.django:hover {
+  filter: drop-shadow(0 0 2em #1b9154aa);
+}
 
-  .logo.docker:hover {
-    filter: drop-shadow(0 0 2em #2d9ebdaa);
-  }
+.logo.flask:hover {
+  filter: drop-shadow(0 0 3em #737a76aa);
+}
 
-  .logo.aws:hover {
-    filter: drop-shadow(0 0 2em #f66e2baa);
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.logo.docker:hover {
+  filter: drop-shadow(0 0 2em #2d9ebdaa);
+}
+
+.logo.aws:hover {
+  filter: drop-shadow(0 0 2em #f66e2baa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-  
-  
-  @keyframes logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
   }
-  
-  @media (prefers-reduced-motion: no-preference) {
-    a:nth-of-type(3) .logo {
-        animation: logo-spin infinite 20s linear;
-      }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(3) .logo {
+    animation: logo-spin infinite 20s linear;
   }
-  
+}
