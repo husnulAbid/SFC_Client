@@ -5,6 +5,8 @@
 .mainBody {
   margin: 0 auto;
   padding: 2rem;
+
+  padding-left: 270px;
   text-align: center;
 
   width: 100wh;

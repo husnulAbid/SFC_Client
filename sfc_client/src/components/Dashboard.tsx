@@ -1,3 +1,4 @@
+import React from "react";
 import "../assets/css/MainBody.css";
 
 import Sidebar from "./SideBar";
