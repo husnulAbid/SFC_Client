@@ -10,8 +10,8 @@ import "../assets/css/Home.css";
 function Home() {
   return (
     <div className="mainRoot">
-      <h2>Secure Forcast</h2>
-      <h5 className="motoLine">Expand Your Business Through Data Analysis</h5>
+      <h1>Secure Forcast</h1>
+      <h3 className="motoLine">Turning Raw Data into Actionable Wisdom</h3>
 
       <div className="exploreButton">
         <Link to="/dashboard">
@@ -19,7 +19,7 @@ function Home() {
         </Link>
       </div>
 
-      <p>
+      <p className="hostedBy">
         Hosted By&nbsp;:&nbsp;
         <a href="https://sites.google.com/view/husnulabid26/">Husnul Abid</a>
       </p>
