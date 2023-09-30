@@ -1,4 +1,4 @@
-import "../assets/css/Dashboard.css";
+import "../assets/css/MainBody.css";
 
 import Sidebar from "./SideBar";
 

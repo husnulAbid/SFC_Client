@@ -1,5 +1,3 @@
-import "../../assets/css/TweetTrend.css";
-
 import Sidebar from "../SideBar";
 
 

@@ -1,5 +1,3 @@
-import "../../assets/css/MeatConsumptionCountry.css";
-
 import Sidebar from "../SideBar";
 
 
