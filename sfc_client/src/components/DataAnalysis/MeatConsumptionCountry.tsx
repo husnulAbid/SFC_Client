@@ -14,7 +14,7 @@ function MeatConsumptionCountry() {
 
   const [selectedOption, setSelectedOption] = useState<
     { key: string; value: string } | undefined
-  >(undefined);
+  >({ key: options[0].key, value: options[0].value });
 
   const handleSelect = (option: { key: string; value: string }) => {
     setSelectedOption(option);
