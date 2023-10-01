@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "../SideBar";
 import ScrollableDropdown from "../Common/ScrollableDropdown";
+import RangeSlider from "../Common/RangeSlider";
 import "../../assets/css/MeatConsumptionCountry.css";
 
 function MeatConsumptionCountry() {
@@ -19,6 +20,17 @@ function MeatConsumptionCountry() {
     setSelectedOption(option);
   };
 
+  const [selectedRange, setSelectedRange] = useState<[number, number]>([2000, 2023]);
+
+  const handleRangeChange = (newRange: [number, number]) => {
+    setSelectedRange(newRange);
+  };
+
+  const [result, setResult] = useState<string | null>(null);
+  const handleButtonClick = () => {
+    setResult('Country: ' + selectedOption?.key + ' & Range: ' + selectedRange[0] + ' - ' + selectedRange[1]);
+  };
+
   return (
     <div>
       <Sidebar />
@@ -31,9 +43,17 @@ function MeatConsumptionCountry() {
           <div className="selectCountryDropdown">
             Country :
             <ScrollableDropdown options={options} onSelect={handleSelect} />
-            <p>Selected Option: {selectedOption?.key}</p>
           </div>
           
+          <div className="selectDurationSlider">
+          <RangeSlider onRangeChange={handleRangeChange}/>
+          </div>
+          
+          <button onClick={handleButtonClick} className="btn btn-primary mccResultButton ">Get Statistics </button>
+        </div>
+
+        <div className="outputSection">
+          {result && <p>{result}</p>}
         </div>
 
       </div>

@@ -1,8 +1,23 @@
+.inputSection{
+  margin-top: 80px;
+}
+
 .selectCountryDropdown{
   float: left;
   margin-left: 20px;
 }
 
-.inputSection{
-  margin-top: 50px;
+.selectDurationSlider{
+  float: left;
+  margin-left: 120px;
+}
+
+.mccResultButton{
+  float: left;
+  margin-left: 120px;
+}
+
+.outputSection{
+  float: left;
+  margin-top: 70px;
 }
