@@ -17,7 +17,7 @@ const RangeSlider: React.FC<RangeSliderProps> = ({ onRangeChange }) => {
   return (
     <div className="range-slider-container">
       <div className="range-inputs">
-        Select a Range:
+        Duration : 
         <input
           type="number"
           value={range[0]}

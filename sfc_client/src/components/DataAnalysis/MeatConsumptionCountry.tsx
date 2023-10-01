@@ -36,7 +36,7 @@ function MeatConsumptionCountry() {
       <Sidebar />
 
       <div className="mainBody">
-        <h5>Meat Consumption Country</h5>
+        <h5>Country-wise Meat Consumption Pattern</h5>
 
         <div className="inputSection">
 
