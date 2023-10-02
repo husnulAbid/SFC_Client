@@ -52,6 +52,8 @@ function MeatConsumptionCountry() {
   const [meatConsumptionData_1, setMeatConsumptionData_1] =
     useState<MeatConsumptionDataType | null>(null);
 
+  const [isButton1Disabled_1, setIsButton1Disabled_1] = useState(false);
+
   const handleGetStatButtonClick_1 = async () => {
     try {
       const response_1 = await fetch(
@@ -143,6 +145,8 @@ function MeatConsumptionCountry() {
     } catch (error) {
       console.error("Error fetching data:", error);
     }
+
+    setIsButton1Disabled_1(true);
   };
 
   const pieChartData_2 = {
@@ -184,6 +188,7 @@ function MeatConsumptionCountry() {
           <button
             onClick={handleGetStatButtonClick_1}
             className="btn btn-primary mccResultButton "
+            disabled={isButton1Disabled_1}
           >
             Get Statistics{" "}
           </button>
