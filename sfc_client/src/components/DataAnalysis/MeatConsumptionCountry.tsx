@@ -68,7 +68,7 @@ function MeatConsumptionCountry() {
       const data_1 = await response_1.json();
       setMeatConsumptionData_1(data_1);
       setPieChartTitle_1(
-        `Consumption at ${data_1?.country} (${data_1?.start_year} - ${data_1?.end_year})`
+        `${selectedOption_1?.value} (${data_1?.start_year} - ${data_1?.end_year})`
       );
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -125,7 +125,7 @@ function MeatConsumptionCountry() {
       const data_2 = await response_2.json();
       setMeatConsumptionData_2(data_2);
       setPieChartTitle_2(
-        `Consumption at ${data_2?.country} (${data_2?.start_year} - ${data_2?.end_year})`
+        `${selectedOption_2?.value} (${data_2?.start_year} - ${data_2?.end_year})`
       );
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -142,7 +142,7 @@ function MeatConsumptionCountry() {
       const data_1 = await response_1.json();
       setMeatConsumptionData_1(data_1);
       setPieChartTitle_1(
-        `Consumption at ${data_1?.country} (${data_1?.start_year} - ${data_1?.end_year})`
+        `${selectedOption_1?.value} (${data_1?.start_year} - ${data_1?.end_year})`
       );
     } catch (error) {
       console.error("Error fetching data:", error);
