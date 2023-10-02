@@ -17,6 +17,13 @@
   margin-left: 120px;
 }
 
+.inputSection_2{
+  float: left;
+  clear: left;
+  display:inline-flex;
+  margin-top: 2%;
+}
+
 .outputSection{
   float: left;
   clear: left;
