@@ -19,17 +19,13 @@ function MeatConsumptionCountry() {
   const options = [
     { key: "AUS", value: "Australia" },
     { key: "BGD", value: "Bangladesh" },
-    { key: "BRA", value: "Brazil" },
     { key: "CAN", value: "Canada" },
     { key: "ETH", value: "Ethiopia" },
-    { key: "EGY", value: "Egypt" },
     { key: "EU28", value: "Europe" },
-    { key: "GHA", value: "Ghana" },
-    { key: "IND", value: "India" },
-    { key: "JPN", value: "Japan" },
     { key: "KOR", value: "Korea" },
     { key: "MEX", value: "Mexico" },
     { key: "NZL", value: "New Zeland" },
+    { key: "PHL", value: "Philippines"},
     { key: "USA", value: "USA" },
   ];
 
@@ -85,7 +81,7 @@ function MeatConsumptionCountry() {
           Number(meatConsumptionData_1?.sheep_consumption),
           Number(meatConsumptionData_1?.pig_consumption),
         ],
-        backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#ff6347"],
+        backgroundColor: ["#BA87F4", "#FDBD7D", "#FCFFA8", "#BCF5FF"],
       },
     ],
   };
@@ -159,7 +155,7 @@ function MeatConsumptionCountry() {
           Number(meatConsumptionData_2?.sheep_consumption),
           Number(meatConsumptionData_2?.pig_consumption),
         ],
-        backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#ff6347"],
+        backgroundColor: ["#BA87F4", "#FDBD7D", "#FCFFA8", "#BCF5FF"],
       },
     ],
   };
