@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Sidebar from "../SideBar";
 import ScrollableDropdown from "../Common/ScrollableDropdown";
 import RangeSlider from "../Common/RangeSlider";
+import PieChart from "../Common/PieChart";
 import "../../assets/css/MeatConsumptionCountry.css";
 
 interface MeatConsumptionDataType {
@@ -60,6 +61,16 @@ function MeatConsumptionCountry() {
     }
   };
 
+  const pieChartData = {
+    labels: ["Label 1", "Label 2", "Label 3"],
+    datasets: [
+      {
+        data: [30, 40, 100],
+        backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+      },
+    ],
+  };
+
   return (
     <div>
       <Sidebar />
@@ -87,12 +98,7 @@ function MeatConsumptionCountry() {
 
         <div className="outputSection">
           {meatConsumptionData && (
-            <p>
-              {" "}
-              pig : {meatConsumptionData.pig_consumption} country:{" "}
-              {meatConsumptionData.country} end year:{" "}
-              {meatConsumptionData.end_year}
-            </p>
+            <PieChart data={pieChartData} title="Pie Chart" />
           )}
         </div>
       </div>
