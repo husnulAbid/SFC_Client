@@ -26,55 +26,55 @@ function MeatConsumptionCountry() {
     { key: "EU28", value: "Europe" },
   ];
 
-  const [pieChartTitle, setPieChartTitle] = useState<string>("");
+  const [pieChartTitle_1, setPieChartTitle_1] = useState<string>("");
 
-  const [selectedOption, setSelectedOption] = useState<
+  const [selectedOption_1, setSelectedOption_1] = useState<
     { key: string; value: string } | undefined
   >({ key: options[0].key, value: options[0].value });
 
-  const handleSelect = (option: { key: string; value: string }) => {
-    setSelectedOption(option);
+  const handleSelect_1 = (option: { key: string; value: string }) => {
+    setSelectedOption_1(option);
   };
 
-  const [selectedRange, setSelectedRange] = useState<[number, number]>([
+  const [selectedRange_1, setSelectedRange_1] = useState<[number, number]>([
     2000, 2023,
   ]);
 
-  const handleRangeChange = (newRange: [number, number]) => {
-    setSelectedRange(newRange);
+  const handleRangeChange_1 = (newRange: [number, number]) => {
+    setSelectedRange_1(newRange);
   };
 
-  const [meatConsumptionData, setMeatConsumptionData] =
+  const [meatConsumptionData_1, setMeatConsumptionData_1] =
     useState<MeatConsumptionDataType | null>(null);
 
-  const handleGetStatButtonClick = async () => {
+  const handleGetStatButtonClick_1 = async () => {
     try {
-      const response = await fetch(
-        `http://127.0.0.1:8000/data_analysis/meat_consumption/api_1/get_all_type_countrywise/?country=${selectedOption?.key}&start_year=${selectedRange[0]}&end_year=${selectedRange[1]}`,
+      const response_1 = await fetch(
+        `http://127.0.0.1:8000/data_analysis/meat_consumption/api_1/get_all_type_countrywise/?country=${selectedOption_1?.key}&start_year=${selectedRange_1[0]}&end_year=${selectedRange_1[1]}`,
         {
           method: "GET",
         }
       );
 
-      const data = await response.json();
-      setMeatConsumptionData(data);
-      setPieChartTitle(
-        `Consumption at ${data?.country} (${data?.start_year} - ${data?.end_year})`
+      const data_1 = await response_1.json();
+      setMeatConsumptionData_1(data_1);
+      setPieChartTitle_1(
+        `Consumption at ${data_1?.country} (${data_1?.start_year} - ${data_1?.end_year})`
       );
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
 
-  const pieChartData = {
+  const pieChartData_1 = {
     labels: ["Beef", "Poultry", "Sheep", "Pork"],
     datasets: [
       {
         data: [
-          Number(meatConsumptionData?.beef_consumption),
-          Number(meatConsumptionData?.poultry_consumption),
-          Number(meatConsumptionData?.sheep_consumption),
-          Number(meatConsumptionData?.pig_consumption),
+          Number(meatConsumptionData_1?.beef_consumption),
+          Number(meatConsumptionData_1?.poultry_consumption),
+          Number(meatConsumptionData_1?.sheep_consumption),
+          Number(meatConsumptionData_1?.pig_consumption),
         ],
         backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#ff6347"],
       },
@@ -91,15 +91,15 @@ function MeatConsumptionCountry() {
         <div className="inputSection">
           <div className="selectCountryDropdown">
             Country :
-            <ScrollableDropdown options={options} onSelect={handleSelect} />
+            <ScrollableDropdown options={options} onSelect={handleSelect_1} />
           </div>
 
           <div className="selectDurationSlider">
-            <RangeSlider onRangeChange={handleRangeChange} />
+            <RangeSlider onRangeChange={handleRangeChange_1} />
           </div>
 
           <button
-            onClick={handleGetStatButtonClick}
+            onClick={handleGetStatButtonClick_1}
             className="btn btn-primary mccResultButton "
           >
             Get Statistics{" "}
@@ -107,8 +107,8 @@ function MeatConsumptionCountry() {
         </div>
 
         <div className="outputSection">
-          {meatConsumptionData && (
-            <PieChart data={pieChartData} title={pieChartTitle} />
+          {meatConsumptionData_1 && (
+            <PieChart data={pieChartData_1} title={pieChartTitle_1} />
           )}
         </div>
       </div>
