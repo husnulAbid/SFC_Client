@@ -19,5 +19,8 @@
 
 .outputSection{
   float: left;
-  margin-top: 70px;
+  clear: left;
+  display:inline-flex;
+  margin-top: 5%;
+  margin-left: 5%;
 }

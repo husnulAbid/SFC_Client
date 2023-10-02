@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import Sidebar from "../SideBar";
 import ScrollableDropdown from "../Common/ScrollableDropdown";
 import RangeSlider from "../Common/RangeSlider";
@@ -25,6 +25,8 @@ function MeatConsumptionCountry() {
     { key: "MEX", value: "Mexico" },
     { key: "EU28", value: "Europe" },
   ];
+
+  const [pieChartTitle, setPieChartTitle] = useState<string>("");
 
   const [selectedOption, setSelectedOption] = useState<
     { key: string; value: string } | undefined
@@ -56,17 +58,25 @@ function MeatConsumptionCountry() {
 
       const data = await response.json();
       setMeatConsumptionData(data);
+      setPieChartTitle(
+        `Consumption at ${data?.country} (${data?.start_year} - ${data?.end_year})`
+      );
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
 
   const pieChartData = {
-    labels: ["Label 1", "Label 2", "Label 3"],
+    labels: ["Beef", "Poultry", "Sheep", "Pork"],
     datasets: [
       {
-        data: [30, 40, 100],
-        backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+        data: [
+          Number(meatConsumptionData?.beef_consumption),
+          Number(meatConsumptionData?.poultry_consumption),
+          Number(meatConsumptionData?.sheep_consumption),
+          Number(meatConsumptionData?.pig_consumption),
+        ],
+        backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#ff6347"],
       },
     ],
   };
@@ -98,7 +108,7 @@ function MeatConsumptionCountry() {
 
         <div className="outputSection">
           {meatConsumptionData && (
-            <PieChart data={pieChartData} title="Pie Chart" />
+            <PieChart data={pieChartData} title={pieChartTitle} />
           )}
         </div>
       </div>

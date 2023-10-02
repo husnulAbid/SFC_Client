@@ -1,22 +1,22 @@
-/* PieChart.css */
 
-/* Style for the container surrounding the pie chart */
 .pie-chart-container {
-    display: flex;
+    display: inline;
     flex-direction: column;
-    align-items: center;
     margin: 20px;
-    max-width: 100%;
-  }
-  
-  /* Style for the pie chart title */
-  .pie-chart-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  /* Style for the pie chart itself */
-  .pie-chart {
-    max-width: 300px; /* Adjust as needed */
-  }
+    margin-right: 15%;
+    max-width: 180%;
+    size: 50px;
+}
 
+.pie-chart-title {
+  margin-right: 10%;
+  font-size: 16px;
+  color: white; /* Set the title text color to white */
+}
+  
+.pie-chart {
+    margin-top: -12%;
+    padding-left: 5%;
+    width: 120%;
+    max-width: 320px;
+  }

@@ -21,12 +21,26 @@ const PieChart: React.FC<PieChartProps> = ({ data, title }) => {
   const options = {
     responsive: true,
     maintainAspectRatio: true,
+    animation: {
+      animateRotate: true,
+      animateScale: true,
+    },
+    plugins: {
+      legend: {
+        position: "right" as const,
+        labels: {
+          padding: 20
+        }
+      },
+    }
   };
 
   return (
-    <div>
-      <h2>{title}</h2>
-      <Pie data={data} options={options} />
+    <div className="pie-chart-container">
+      <h6 className="pie-chart-title">{title}</h6>
+      <div className="pie-chart">
+        <Pie data={data} options={options} />
+      </div>
     </div>
   );
 };

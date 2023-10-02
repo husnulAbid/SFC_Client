@@ -11,7 +11,7 @@
 
   width: 100wh;
   height: 100vh;
-  overflow: hidden;
+  overflow: scroll;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
