@@ -43,11 +43,14 @@ const Sidebar: any = () => {
               <li>Meat Consumption</li>
             </Link>
 
-            <Link to="/data_analysis/tweet_trend" style={{ textDecoration: "none" }}>
+            {/* <Link to="/data_analysis/tweet_trend" style={{ textDecoration: "none" }}>
               <li>Tweet Trend</li>
-            </Link>
+            </Link> */}
 
-            <li>War Effect</li>
+            <Link to="/data_analysis/war_effect" style={{ textDecoration: "none" }}>
+              <li>War Effect</li>
+            </Link>
+            <li></li>
           </ul>
         )}
 
