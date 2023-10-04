@@ -2,6 +2,11 @@ import React from "react";
 import { Line } from "react-chartjs-2";
 import "../../assets/css/LineChart.css";
 
+import { Chart } from 'chart.js';
+import annotationPlugin from 'chartjs-plugin-annotation';
+
+Chart.register(annotationPlugin);
+
 type LineChartProps = {
   data: {
     labels: string[];
@@ -21,7 +26,20 @@ const LineChart: React.FC<LineChartProps> = ({ data, title }) => {
       legend: {
         display: false,
       },
+      annotation: {
+        annotations: [
+          {
+            type: "line" as const,
+            mode: "vertical",
+            scaleID: "x",
+            value: "1971", // Specify the label where you want the line
+            borderColor: "red", // Color of the vertical line
+            borderWidth: 2, // Line width
+          },
+        ],
+      },
     },
+    
   };
 
   return (
