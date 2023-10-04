@@ -27,14 +27,22 @@ const LineChart: React.FC<LineChartProps> = ({ data, title }) => {
         display: false,
       },
       annotation: {
+        drawTime: "afterDraw" as const,
         annotations: [
           {
             type: "line" as const,
             mode: "vertical",
             scaleID: "x",
-            value: "1971", // Specify the label where you want the line
-            borderColor: "red", // Color of the vertical line
-            borderWidth: 2, // Line width
+            value: "1971",
+            borderColor: "red",
+            borderWidth: 2,
+            label: {
+              content: "War",
+              display: true,
+              color: "white",
+              xAdjust: 22,
+              yAdjust: - 80
+            },
           },
         ],
       },
