@@ -1,5 +1,13 @@
-.weButton{
-  float: left;
-  margin-left: 120px;
+.inputWarEffect{
+  margin-top: 80px;
 }
 
+.selectMetricTypeDropdown{
+  float: left;
+  margin-left: 20%;
+}
+
+.weButton{
+  float: left;
+  margin-left: 17%;
+}
