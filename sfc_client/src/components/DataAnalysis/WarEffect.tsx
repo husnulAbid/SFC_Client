@@ -41,6 +41,7 @@ function WarEffect() {
   >({ key: optionsMetricType[0].key, value: optionsMetricType[0].value });
 
   const [lineChartTitle, setLineChartTitle] = useState<string>("");
+  const [lineChartYLabel, setLineChartYLabel] = useState<string>("");
   const [lineChartLegend, setLineChartLegend] = useState<string>("");
   const [lineChartLabel, setLineChartLabel] = useState<string[]>([]);
   const [lineChartData, setLineChartData] = useState<number[]>([]);
@@ -54,19 +55,18 @@ function WarEffect() {
 
   const handleShowGraphButtonClick = async () => {
     try {
-      const warEffectApiData = await fetchWarEffectData(
-        String(selectedMetricType?.key),
-        15
-      );
+      const warEffectApiData = await fetchWarEffectData(String(selectedMetricType?.key), 15);
       const resultData = warEffectApiData["result_data"];
-
       const chartLabels = resultData.map((item: any) => item.Year);
       const chartDatas = resultData.map((item: any) => Number(item.Value));
 
       setLineChartLabel(chartLabels);
       setLineChartData(chartDatas);
+
       setLineChartTitle("Effects on " + String(selectedMetricType?.value).substring(0, String(selectedMetricType?.value).indexOf("(")));
+      setLineChartYLabel(String(selectedMetricType?.value).substring(String(selectedMetricType?.value).indexOf("(") + 1, String(selectedMetricType?.value).indexOf(")")));
       setLineChartLegend(String(selectedMetricType?.key));
+
     } catch (error: any) {
       console.error(error.message);
     }
@@ -78,7 +78,7 @@ function WarEffect() {
       {
         label: lineChartLegend,
         data: lineChartData,
-        borderColor: "white",
+        borderColor: "#BCF5FF",
         fill: true,
       },
     ],
@@ -109,7 +109,7 @@ function WarEffect() {
         </div>
 
         <div className="outputWarEffectSection">
-          <LineChart data={chartData} title={lineChartTitle} />
+          <LineChart data={chartData} title={lineChartTitle} y_label={lineChartYLabel} />
         </div>
       </div>
     </div>

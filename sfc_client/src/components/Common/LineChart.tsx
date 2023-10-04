@@ -18,10 +18,33 @@ type LineChartProps = {
     }[];
   };
   title: string;
+  y_label: string;
 };
 
-const LineChart: React.FC<LineChartProps> = ({ data, title }) => {
+const LineChart: React.FC<LineChartProps> = ({ data, title, y_label }) => {
   const options = {
+    scales: {
+      x: {
+        title: {
+          display: true,
+          text: 'Year' as string,
+          color: 'white',
+        },
+        ticks:{
+          color: 'white'
+        }
+      },
+      y: {
+        title: {
+          display: true,
+          text: y_label as string,
+          color: 'white',
+        },
+        ticks:{
+          color: 'white'
+        }
+      },
+    },    
     plugins: {
       legend: {
         display: false,
