@@ -65,7 +65,7 @@ function WarEffect() {
 
       setLineChartLabel(chartLabels);
       setLineChartData(chartDatas);
-      setLineChartTitle(String(selectedMetricType?.value));
+      setLineChartTitle("Effects on " + String(selectedMetricType?.value).substring(0, String(selectedMetricType?.value).indexOf("(")));
       setLineChartLegend(String(selectedMetricType?.key));
     } catch (error: any) {
       console.error(error.message);
@@ -108,7 +108,9 @@ function WarEffect() {
           </button>
         </div>
 
-        <LineChart data={chartData} />
+        <div className="outputWarEffectSection">
+          <LineChart data={chartData} title={lineChartTitle} />
+        </div>
       </div>
     </div>
   );

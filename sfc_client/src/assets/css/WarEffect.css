@@ -11,3 +11,11 @@
   float: left;
   margin-left: 17%;
 }
+
+.outputWarEffectSection{
+  float: left;
+  display: inline-flex;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 120%;
+}
