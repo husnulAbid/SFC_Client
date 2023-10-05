@@ -117,7 +117,7 @@ function Dashboard() {
             <Card.Body>
               <Card.Text style={{ color: "white" }}>Tweet Topics</Card.Text>
               <Card.Link
-                href=""
+                href="/data_analysis/tweet_trend"
                 style={{
                   color: "#64DEFC",
                   textDecoration: "none",
@@ -156,7 +156,7 @@ function Dashboard() {
             <Card.Body>
               <Card.Text style={{ color: "white" }}>Housing Price</Card.Text>
               <Card.Link
-                href=""
+                href="/future_prediction/housing_price"
                 style={{
                   color: "#64DEFC",
                   textDecoration: "none",
@@ -191,7 +191,7 @@ function Dashboard() {
             <Card.Body>
               <Card.Text style={{ color: "white" }}>Weather Forecast</Card.Text>
               <Card.Link
-                href=""
+                href="/future_prediction/weather_forecast"
                 style={{
                   color: "#64DEFC",
                   textDecoration: "none",

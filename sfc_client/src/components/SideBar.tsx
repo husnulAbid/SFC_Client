@@ -65,8 +65,13 @@ const Sidebar: any = () => {
 
         {isItemOpen_2 && (
           <ul className="sub-menu">
-            <li>Housing Price</li>
-            <li>Weather</li>
+            <Link to="/future_prediction/housing_price" style={{ textDecoration: "none" }}>
+              <li>Housing Price</li>
+            </Link>
+
+            <Link to="/future_prediction/weather_forecast" style={{ textDecoration: "none" }}>
+              <li>Weather</li>
+            </Link>
           </ul>
         )}
 

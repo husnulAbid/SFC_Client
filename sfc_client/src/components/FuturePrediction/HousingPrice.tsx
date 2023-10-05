@@ -2,13 +2,13 @@ import React from "react";
 import Sidebar from "../SideBar";
 
 
-function TweetTrend() {
+function HousingPrice() {
   return (
     <div>
       <Sidebar />
 
       <div className="mainBody">
-        <h5>Tweet Trend</h5>
+        <h5>Housing Price</h5>
 
         <p>Page is under Construction</p>
       </div>
@@ -16,4 +16,4 @@ function TweetTrend() {
   );
 }
 
-export default TweetTrend;
+export default HousingPrice;
