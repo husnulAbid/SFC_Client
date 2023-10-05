@@ -5,7 +5,7 @@ import "../assets/css/SideBar.css";
 
 const Sidebar: any = () => {
   const [isItemOpen_1, setIsItemOpen_1] = useState(true);
-  const [isItemOpen_2, setIsItemOpen_2] = useState(false);
+  const [isItemOpen_2, setIsItemOpen_2] = useState(true);
 
   const toggleItem_1 = () => {
     setIsItemOpen_1(!isItemOpen_1);
