@@ -39,7 +39,10 @@ const Sidebar: any = () => {
 
         {isItemOpen_1 && (
           <ul className="sub-menu">
-            <Link to="/data_analysis/meat_consumption" style={{ textDecoration: "none" }}>
+            <Link
+              to="/data_analysis/meat_consumption"
+              style={{ textDecoration: "none" }}
+            >
               <li>Meat Consumption</li>
             </Link>
 
@@ -47,7 +50,10 @@ const Sidebar: any = () => {
               <li>Tweet Trend</li>
             </Link> */}
 
-            <Link to="/data_analysis/war_effect" style={{ textDecoration: "none" }}>
+            <Link
+              to="/data_analysis/war_effect"
+              style={{ textDecoration: "none" }}
+            >
               <li>War Effect</li>
             </Link>
             <li></li>
@@ -65,17 +71,28 @@ const Sidebar: any = () => {
 
         {isItemOpen_2 && (
           <ul className="sub-menu">
-            <Link to="/future_prediction/housing_price" style={{ textDecoration: "none" }}>
+            <Link
+              to="/future_prediction/housing_price"
+              style={{ textDecoration: "none" }}
+            >
               <li>Housing Price</li>
             </Link>
 
-            <Link to="/future_prediction/weather_forecast" style={{ textDecoration: "none" }}>
+            <Link
+              to="/future_prediction/weather_forecast"
+              style={{ textDecoration: "none" }}
+            >
               <li>Weather</li>
             </Link>
           </ul>
         )}
 
-        <li>About Us</li>
+        <Link
+          to="/about_me"
+          style={{ textDecoration: "none" }}
+        >
+          <li>About Me</li>
+        </Link>
       </ul>
     </div>
   );
