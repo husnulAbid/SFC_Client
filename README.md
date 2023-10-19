@@ -19,4 +19,9 @@ Using SFC Client which is build with React, we can visualize data analytics API.
 3. Run the program uisng npm run dev
 
 
-![model](sfc_client/src/assets/photo/housing_price_1.png)
+## Few pages of SFC Client
+
+![model](sfc_client/src/assets/photo/docs/landing_page.png)
+![model](sfc_client/src/assets/photo/docs/dashboard_1.png)
+![model](sfc_client/src/assets/photo/docs/meat_consumption_1.png)
+![model](sfc_client/src/assets/photo/docs/war_effect_1.png)
