@@ -10,7 +10,7 @@ const fetchWarEffectData = async (
   metric_name: string,
   year_duration: number
 ) => {
-  const apiUrl = `http://127.0.0.1:5000/analysis/war_effect_data?metric_name=${metric_name}&year_duration=${year_duration}`;
+  const apiUrl = `http://127.0.0.1:5100/analysis/war_effect_data?metric_name=${metric_name}&year_duration=${year_duration}`;
 
   try {
     const response = await fetch(apiUrl);

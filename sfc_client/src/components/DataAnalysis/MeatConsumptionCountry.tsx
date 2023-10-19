@@ -57,7 +57,7 @@ function MeatConsumptionCountry() {
   const handleGetStatButtonClick_1 = async () => {
     try {
       const response_1 = await fetch(
-        `http://127.0.0.1:8000/data_analysis/meat_consumption/api_1/get_all_type_countrywise/?country=${selectedOption_1?.key}&start_year=${selectedRange_1[0]}&end_year=${selectedRange_1[1]}`,
+        `http://127.0.0.1:7800/data_analysis/meat_consumption/api_1/get_all_type_countrywise/?country=${selectedOption_1?.key}&start_year=${selectedRange_1[0]}&end_year=${selectedRange_1[1]}`,
         {
           method: "GET",
         }
@@ -114,7 +114,7 @@ function MeatConsumptionCountry() {
   const handleGetStatButtonClick_2 = async () => {
     try {
       const response_2 = await fetch(
-        `http://127.0.0.1:8000/data_analysis/meat_consumption/api_1/get_all_type_countrywise/?country=${selectedOption_2?.key}&start_year=${selectedRange_2[0]}&end_year=${selectedRange_2[1]}`,
+        `http://127.0.0.1:7800/data_analysis/meat_consumption/api_1/get_all_type_countrywise/?country=${selectedOption_2?.key}&start_year=${selectedRange_2[0]}&end_year=${selectedRange_2[1]}`,
         {
           method: "GET",
         }
@@ -131,7 +131,7 @@ function MeatConsumptionCountry() {
 
     try {
       const response_1 = await fetch(
-        `http://127.0.0.1:8000/data_analysis/meat_consumption/api_1/get_all_type_countrywise/?country=${selectedOption_1?.key}&start_year=${selectedRange_1[0]}&end_year=${selectedRange_1[1]}`,
+        `http://127.0.0.1:7800/data_analysis/meat_consumption/api_1/get_all_type_countrywise/?country=${selectedOption_1?.key}&start_year=${selectedRange_1[0]}&end_year=${selectedRange_1[1]}`,
         {
           method: "GET",
         }
