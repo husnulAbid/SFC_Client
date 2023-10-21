@@ -1,7 +1,6 @@
 # SFC_Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-Using SFC Client which is build with React, we can visualize data analytics API. 
+Using SFC client, it is possible to analyze and get insight into few datasets more effectively and efficiently.
 
 
 ## Features 
